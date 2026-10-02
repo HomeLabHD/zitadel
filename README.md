@@ -1,6 +1,8 @@
 <p align="center">
-    <img src="./apps/docs/public/img/logos/zitadel-logo-dark@2x.png#gh-light-mode-only" alt="ZITADEL Logo" max-height="200px" width="auto" />
-    <img src="./apps/docs/public/img/logos/zitadel-logo-light@2x.png#gh-dark-mode-only" alt="ZITADEL Logo" max-height="200px" width="auto" />
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="./apps/docs/public/img/logos/zitadel-logo-light@2x.png" />
+        <img src="./apps/docs/public/img/logos/zitadel-logo-dark@2x.png" alt="ZITADEL Logo" height="200" width="auto" />
+    </picture>
 </p>
 
 <p align="center">
