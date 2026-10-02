@@ -41,6 +41,7 @@ lint:
     - internal/integration/**
     - tests/**
     - console/src/assets/i18n/**
+    - internal/static/i18n/**
     - proto/zitadel/resources/user/v3alpha/authenticator.proto
     - proto/zitadel/user/v2/user_service.proto
   preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/lint-generic.yml
