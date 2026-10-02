@@ -37,6 +37,26 @@
 
 No vendor lock-in. No compromise on control. Just a robust, API-first identity platform you can own.
 
+> The purpose of this fork is to close an issue; login v2 ignores a
+> project's **private-labeling** setting, so a tenant's login page can't be branded
+> per-organization the way the Console implies ([zitadel#10692](https://github.com/zitadel/zitadel/issues/10692)).
+> The fix resolves the branding organization server-side (project private-labeling → instance
+> default) and has the Login v2 app honor it. The fork tracks upstream and is rebased onto each
+> release — apart from this fix it is identical to the upstream version it is built from, so a
+> given fork tag is equivalent to the same upstream version.
+
+> [!IMPORTANT]
+> **Keep this fork current — identity is your front door.** This fork exists only to carry the #10692 branding fix and is rebased onto each upstream release, so a fork tag equals that upstream version plus the one patch. Check this fork's tag against the [latest upstream release](https://github.com/zitadel/zitadel/releases) before you deploy. If upstream ships an urgent security or stability fix this fork hasn't picked up yet, **switch back to upstream `ghcr.io/zitadel/zitadel` until the fork catches up** — a stale IAM is a liability no branding fix is worth.
+
+<!-- sf:project:start -->
+<!-- sf:project:end -->
+
+<!-- sf:badges:start -->
+<!-- sf:badges:end -->
+
+<!-- sf:image:start -->
+<!-- sf:image:end -->
+
 ---
 
 **[🏡 Website](https://zitadel.com) &nbsp;|&nbsp; [💬 Chat](https://zitadel.com/chat) &nbsp;|&nbsp; [📋 Docs](https://zitadel.com/docs/) &nbsp;|&nbsp; [🧑‍💻 Blog](https://zitadel.com/blog) &nbsp;|&nbsp; [📞 Contact](https://zitadel.com/contact/)**
