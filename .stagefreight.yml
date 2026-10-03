@@ -1,0 +1,314 @@
+# ------------------------------------------------------------------------------
+# GENERATED / ENFORCED BY STAGEFREIGHT GOVERNANCE
+# Source repo: PrPlanIT/MaintenancePolicy
+# Profile: hlhd-docker
+# This .stagefreight.yml is governed, not purely local.
+# To disable governance, detach from the control repo workflow.
+# Manual changes may be overwritten by reconciliation.
+# ------------------------------------------------------------------------------
+
+version: 1
+builds:
+  image:
+    dockerfile: apps/api/Dockerfile
+  login:
+    dockerfile: apps/login/Dockerfile
+    kind: docker
+    platforms:
+      - linux/amd64
+  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/build-docker.yml
+scribe:
+  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/scribe-docker.yml
+lint:
+  exclude:
+    - '*.png'
+    - '*.jpg'
+    - '*.jpeg'
+    - '*.gif'
+    - '*.webp'
+    - '*.ico'
+    - '*.svg'
+    - '*.ttf'
+    - '*.woff'
+    - '*.woff2'
+    - '*.pdf'
+    - apps/docs/**
+    - console/dist/**
+    - '**/*.pb.go'
+    - '**/*_test.go'
+    - '**/*.test.ts'
+    - apps/login/acceptance/**
+    - internal/integration/**
+    - tests/**
+    - console/src/assets/i18n/**
+    - internal/static/i18n/**
+    - proto/zitadel/resources/user/v3alpha/authenticator.proto
+    - proto/zitadel/user/v2/user_service.proto
+  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/lint-generic.yml
+security:
+  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/security.yml
+dependency:
+  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/dependency.yml
+  remediate: false
+commit:
+  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/commit.yml
+release:
+  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/release.yml
+manifest:
+  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/manifest.yml
+build_cache:
+  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/build_cache.yml
+ci:
+  forge:
+    - gitlab
+  image: docker.cr.pcfae.com/prplanit/stagefreight:latest-dev
+forges:
+  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/forges.yml
+git:
+  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/git.yml
+metadata:
+  category: identity
+  description:
+    - Identity and access management — an OIDC/OAuth2/SAML provider and user-management platform.
+    - 'Fork of Zitadel carrying the login-v2 project-private-labeling fix (upstream #10692); the backend and login-v2 images are built from source and published from this repo.'
+  license: Apache-2.0
+  org: HomeLabHD
+  title: Zitadel
+  topics:
+    - zitadel
+    - identity
+    - oidc
+    - oauth2
+    - saml
+    - iam
+    - sso
+orgs:
+  HomeLabHD:
+    aliases:
+      docker: hlhd
+      ghcr: homelabhd
+      github: HomeLabHD
+      handle: hlhd
+    maintainer: HomeLabHD <homelabhelp@gmail.com>
+publish:
+  dev:
+    build: image
+    kind: registry
+    registry:
+      - dockerhub
+      - ghcr
+      - harbor
+    retention:
+      keep_last: 2
+    tags:
+      - dev-{sha:8}
+      - latest-dev
+    when:
+      branches:
+        - main
+      events:
+        - push
+  dev-release:
+    aliases:
+      - latest-dev
+    kind: release
+    registry_links: true
+    repos:
+      - primary
+    retention:
+      keep_last: 2
+    security_summary: true
+    tag: dev-{sha:8}
+    type: prerelease
+    when:
+      branches:
+        - main
+      events:
+        - push
+  login-ghcr-dev:
+    build: login
+    kind: registry
+    path: '{org.ghcr}/zitadel-login'
+    registry:
+      - ghcr
+    retention:
+      keep_last: 2
+    tags:
+      - dev-{sha:8}
+      - latest-dev
+    when:
+      branches:
+        - main
+      events:
+        - push
+  login-ghcr-prerelease:
+    build: login
+    kind: registry
+    path: '{org.ghcr}/zitadel-login'
+    registry:
+      - ghcr
+    tags:
+      - v{version}
+    when:
+      events:
+        - tag
+      git_tags:
+        - prerelease
+  login-ghcr-stable:
+    build: login
+    kind: registry
+    path: '{org.ghcr}/zitadel-login'
+    registry:
+      - ghcr
+    tags:
+      - v{version}
+      - latest
+    when:
+      events:
+        - tag
+      git_tags:
+        - stable
+  login-reg-dev:
+    build: login
+    kind: registry
+    path: '{org.docker}/zitadel-login'
+    registry:
+      - dockerhub
+      - harbor
+    retention:
+      keep_last: 2
+    tags:
+      - dev-{sha:8}
+      - latest-dev
+    when:
+      branches:
+        - main
+      events:
+        - push
+  login-reg-prerelease:
+    build: login
+    kind: registry
+    path: '{org.docker}/zitadel-login'
+    registry:
+      - dockerhub
+      - harbor
+    tags:
+      - v{version}
+    when:
+      events:
+        - tag
+      git_tags:
+        - prerelease
+  login-reg-stable:
+    build: login
+    kind: registry
+    path: '{org.docker}/zitadel-login'
+    registry:
+      - dockerhub
+      - harbor
+    tags:
+      - v{version}
+      - latest
+    when:
+      events:
+        - tag
+      git_tags:
+        - stable
+  prerelease:
+    build: image
+    kind: registry
+    registry:
+      - dockerhub
+      - ghcr
+      - harbor
+    tags:
+      - v{version}
+    when:
+      events:
+        - tag
+      git_tags:
+        - prerelease
+  prerelease-release:
+    kind: release
+    registry_links: true
+    repos:
+      - primary
+    security_summary: true
+    type: prerelease
+    when:
+      events:
+        - tag
+      git_tags:
+        - prerelease
+  project-metadata:
+    kind: metadata
+    readme: README.md
+    registry:
+      - dockerhub
+      - harbor
+    repos:
+      - primary
+      - github-mirror
+    when:
+      branches:
+        - main
+      events:
+        - push
+        - tag
+  release:
+    aliases:
+      - v{version}
+      - latest
+    kind: release
+    registry_links: true
+    repos:
+      - primary
+    security_summary: true
+    type: latest
+    when:
+      events:
+        - tag
+      git_tags:
+        - stable
+  stable:
+    build: image
+    kind: registry
+    registry:
+      - dockerhub
+      - ghcr
+      - harbor
+    tags:
+      - v{version}
+      - latest
+    when:
+      events:
+        - tag
+      git_tags:
+        - stable
+registries:
+  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/registries.yml
+repos:
+  github-mirror:
+    forge: github
+    project: HomeLabHD/zitadel
+    roles:
+      - mirror
+      - publish-origin
+    sync:
+      git: true
+      releases: true
+  primary:
+    branches:
+      default: main
+    forge: gitlab
+    project: HomeLabHD/zitadel
+    roles:
+      - primary
+    worktree: .
+stencils:
+  presets:
+    - https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/stencils-base.yml
+    - https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/stencils-status.yml
+    - https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/stencils-docker.yml
+toolchains:
+  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/toolchains.yml
