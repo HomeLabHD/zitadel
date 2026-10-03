@@ -1,0 +1,16 @@
+# Repo-root build context for the self-contained fork Dockerfiles (apps/api, apps/login).
+# Exclude installed/generated/VCS trees so the context stays small; KEEP the sources the
+# from-source build needs (proto/, packages/, console/, apps/, go.*, pnpm-*).
+**/node_modules
+.git
+.artifacts
+.pnpm-store
+.nx
+**/.next
+console/dist
+console/src/app/proto/generated
+**/.turbo
+**/coverage
+**/*.log
+.devcontainer
+.vscode

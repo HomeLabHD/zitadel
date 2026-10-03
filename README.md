@@ -1,7 +1,7 @@
 <p align="center">
     <picture>
         <source media="(prefers-color-scheme: dark)" srcset="./apps/docs/public/img/logos/zitadel-logo-light@2x.png" />
-        <img src="./apps/docs/public/img/logos/zitadel-logo-dark@2x.png" alt="ZITADEL Logo" height="200" width="auto" />
+        <img src="https://raw.githubusercontent.com/HomeLabHD/zitadel/main/apps/docs/public/img/logos/zitadel-logo-dark@2x.png" alt="ZITADEL Logo" height="200" width="auto" />
     </picture>
 </p>
 
@@ -30,7 +30,7 @@
 
 <p align="center">
     <a href="https://openid.net/certification/#OPs" alt="OpenID Connect Certified">
-        <img src="./apps/docs/public/img/logos/oidc-cert.png" /></a>
+        <img src="https://raw.githubusercontent.com/HomeLabHD/zitadel/main/apps/docs/public/img/logos/oidc-cert.png" /></a>
 </p>
 
 ## The Identity Infrastructure for Developers
@@ -51,12 +51,17 @@ No vendor lock-in. No compromise on control. Just a robust, API-first identity p
 > **Keep this fork current — identity is your front door.** This fork exists only to carry the #10692 branding fix and is rebased onto each upstream release, so a fork tag equals that upstream version plus the one patch. Check this fork's tag against the [latest upstream release](https://github.com/zitadel/zitadel/releases) before you deploy. If upstream ships an urgent security or stability fix this fork hasn't picked up yet, **switch back to upstream `ghcr.io/zitadel/zitadel` until the fork catches up** — a stale IAM is a liability no branding fix is worth.
 
 <!-- sf:project:start -->
+[![GitHub](https://img.shields.io/badge/GitHub-mirror-181717?logo=github)](https://github.com/HomeLabHD/zitadel) [![GitLab](https://img.shields.io/badge/GitLab-source-FC6D26?logo=gitlab)](https://gitlab.prplanit.com/HomeLabHD/zitadel) [![license](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/license.svg)](https://github.com/HomeLabHD/zitadel/blob/main/LICENSE) [![Open Issues](https://img.shields.io/github/issues/HomeLabHD/zitadel)](https://github.com/HomeLabHD/zitadel/issues) [![Open PRs](https://img.shields.io/github/issues-pr/HomeLabHD/zitadel)](https://github.com/HomeLabHD/zitadel/pulls) [![Contributors](https://img.shields.io/github/contributors/HomeLabHD/zitadel)](https://github.com/HomeLabHD/zitadel/graphs/contributors) [![donate](https://img.shields.io/badge/donate-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/T6T41IT163) [![sponsor](https://img.shields.io/badge/sponsor-EA4AAA?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/HomeLabHD)
 <!-- sf:project:end -->
 
 <!-- sf:badges:start -->
+[![release](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/release.svg)](https://github.com/HomeLabHD/zitadel/releases) [![build](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/build.svg)](https://gitlab.prplanit.com/HomeLabHD/zitadel/-/pipelines) [![Last Commit](https://img.shields.io/github/last-commit/HomeLabHD/zitadel)](https://github.com/HomeLabHD/zitadel/commits) [![StageFreight](https://img.shields.io/badge/StageFreight-0.12.0--dev+74c09fa-310937?logo=readthedocs&logoColor=white)](https://stagefreight.prplanit.com)
 <!-- sf:badges:end -->
 
 <!-- sf:image:start -->
+[![GHCR](https://img.shields.io/badge/GHCR-homelabhd%2Fzitadel-181717?logo=github&logoColor=white)](https://github.com/HomeLabHD/zitadel/pkgs/container/zitadel) [![Docker](https://img.shields.io/badge/Docker-hlhd%2Fzitadel-2496ED?logo=docker&logoColor=white)](https://hub.docker.com/r/hlhd/zitadel) [![pulls](https://img.shields.io/docker/pulls/hlhd/zitadel?color=1d63ed&logo=docker&logoColor=white)](https://hub.docker.com/r/hlhd/zitadel) [![Harbor](https://img.shields.io/badge/Harbor-hlhd%2Fzitadel-60b932)](https://cr.pcfae.com/harbor/projects)
+
+[![latest](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/release-latest.svg)](https://github.com/HomeLabHD/zitadel/pkgs/container/zitadel) ![updated](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/release-updated.svg) [![size](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/release-size.svg)](https://github.com/HomeLabHD/zitadel/pkgs/container/zitadel) [![latest-dev](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/dev-latest.svg)](https://github.com/HomeLabHD/zitadel/pkgs/container/zitadel) ![updated](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/dev-updated.svg) [![size](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/dev-size.svg)](https://github.com/HomeLabHD/zitadel/pkgs/container/zitadel)
 <!-- sf:image:end -->
 
 ---
@@ -183,7 +188,7 @@ Our new, fully customizable login experience — [documentation](https://zitadel
 
 ## Adopters & Ecosystem
 
-Used in production by organizations worldwide. See the full [Adopters list](./ADOPTERS.md) — and add yours by submitting a pull request.
+Used in production by organizations worldwide. See the full [Adopters list](https://github.com/HomeLabHD/zitadel/blob/main/ADOPTERS.md) — and add yours by submitting a pull request.
 
 - **SDKs**: [All supported languages and frameworks](https://zitadel.com/docs/sdk-examples/introduction)
 - **Examples**: [Clone and use our examples](https://zitadel.com/docs/sdk-examples/introduction)
@@ -194,7 +199,7 @@ Used in production by organizations worldwide. See the full [Adopters list](./AD
 
 ZITADEL is built in the open and welcoming to contributions of all kinds.
 
-- 📖 Read the [Contribution Guide](./CONTRIBUTING.md) to get started
+- 📖 Read the [Contribution Guide](https://github.com/HomeLabHD/zitadel/blob/main/CONTRIBUTING.md) to get started
 - 💬 Join the conversation on [Discord](https://zitadel.com/chat)
 - 🐛 Report bugs or request features via [GitHub Issues](https://github.com/zitadel/zitadel/issues)
 
@@ -210,7 +215,7 @@ Made with [contrib.rocks](https://contrib.rocks/preview?repo=zitadel/zitadel).
 
 ## Security
 
-Security policy: [SECURITY.md](./SECURITY.md)
+Security policy: [SECURITY.md](https://github.com/HomeLabHD/zitadel/blob/main/SECURITY.md)
 
 [Vulnerability Disclosure Policy](https://zitadel.com/docs/legal/policies/vulnerability-disclosure-policy) — how to responsibly report security issues.
 
@@ -218,4 +223,4 @@ Security policy: [SECURITY.md](./SECURITY.md)
 
 ## License
 
-[AGPL-3.0](./LICENSE) — see [LICENSING.md](./LICENSING.md) for the full licensing policy, including Apache 2.0 and MIT exceptions for specific directories.
+[AGPL-3.0](https://github.com/HomeLabHD/zitadel/blob/main/LICENSE) — see [LICENSING.md](https://github.com/HomeLabHD/zitadel/blob/main/LICENSING.md) for the full licensing policy, including Apache 2.0 and MIT exceptions for specific directories.
