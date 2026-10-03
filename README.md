@@ -55,7 +55,7 @@ No vendor lock-in. No compromise on control. Just a robust, API-first identity p
 <!-- sf:project:end -->
 
 <!-- sf:badges:start -->
-[![release](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/release.svg)](https://github.com/HomeLabHD/zitadel/releases) [![build](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/build.svg)](https://gitlab.prplanit.com/HomeLabHD/zitadel/-/pipelines) [![Last Commit](https://img.shields.io/github/last-commit/HomeLabHD/zitadel)](https://github.com/HomeLabHD/zitadel/commits) [![StageFreight](https://img.shields.io/badge/StageFreight-0.12.0--dev+74c09fa-310937?logo=readthedocs&logoColor=white)](https://stagefreight.prplanit.com)
+[![release](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/release.svg)](https://github.com/HomeLabHD/zitadel/releases) [![build](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/build.svg)](https://gitlab.prplanit.com/HomeLabHD/zitadel/-/pipelines) [![Last Commit](https://img.shields.io/github/last-commit/HomeLabHD/zitadel)](https://github.com/HomeLabHD/zitadel/commits) [![StageFreight](https://img.shields.io/badge/StageFreight-0.13.0--dev+2c0fc21-310937?logo=readthedocs&logoColor=white)](https://stagefreight.prplanit.com)
 <!-- sf:badges:end -->
 
 <!-- sf:image:start -->
