@@ -1,6 +1,8 @@
 <p align="center">
-    <img src="./apps/docs/public/img/logos/zitadel-logo-dark@2x.png#gh-light-mode-only" alt="ZITADEL Logo" max-height="200px" width="auto" />
-    <img src="./apps/docs/public/img/logos/zitadel-logo-light@2x.png#gh-dark-mode-only" alt="ZITADEL Logo" max-height="200px" width="auto" />
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="./apps/docs/public/img/logos/zitadel-logo-light@2x.png" />
+        <img src="./apps/docs/public/img/logos/zitadel-logo-dark@2x.png" alt="ZITADEL Logo" height="200" width="auto" />
+    </picture>
 </p>
 
 <p align="center">
@@ -36,6 +38,26 @@
 **ZITADEL** is an open-source identity and access management platform built for teams that need more than basic auth. Whether you're securing a SaaS product, building a B2B platform, or self-hosting a production IAM stack — ZITADEL gives you everything out of the box: SSO, MFA, Passkeys, OIDC, SAML, SCIM, and a battle-tested multi-tenancy model.
 
 No vendor lock-in. No compromise on control. Just a robust, API-first identity platform you can own.
+
+> The purpose of this fork is to close an issue; login v2 ignores a
+> project's **private-labeling** setting, so a tenant's login page can't be branded
+> per-organization the way the Console implies ([zitadel#10692](https://github.com/zitadel/zitadel/issues/10692)).
+> The fix resolves the branding organization server-side (project private-labeling → instance
+> default) and has the Login v2 app honor it. The fork tracks upstream and is rebased onto each
+> release — apart from this fix it is identical to the upstream version it is built from, so a
+> given fork tag is equivalent to the same upstream version.
+
+> [!IMPORTANT]
+> **Keep this fork current — identity is your front door.** This fork exists only to carry the #10692 branding fix and is rebased onto each upstream release, so a fork tag equals that upstream version plus the one patch. Check this fork's tag against the [latest upstream release](https://github.com/zitadel/zitadel/releases) before you deploy. If upstream ships an urgent security or stability fix this fork hasn't picked up yet, **switch back to upstream `ghcr.io/zitadel/zitadel` until the fork catches up** — a stale IAM is a liability no branding fix is worth.
+
+<!-- sf:project:start -->
+<!-- sf:project:end -->
+
+<!-- sf:badges:start -->
+<!-- sf:badges:end -->
+
+<!-- sf:image:start -->
+<!-- sf:image:end -->
 
 ---
 
