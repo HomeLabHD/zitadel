@@ -64,6 +64,9 @@ No vendor lock-in. No compromise on control. Just a robust, API-first identity p
 [![latest](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/release-latest.svg)](https://github.com/HomeLabHD/zitadel/pkgs/container/zitadel) ![updated](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/release-updated.svg) [![size](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/release-size.svg)](https://github.com/HomeLabHD/zitadel/pkgs/container/zitadel) [![latest-dev](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/dev-latest.svg)](https://github.com/HomeLabHD/zitadel/pkgs/container/zitadel) ![updated](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/dev-updated.svg) [![size](https://raw.githubusercontent.com/HomeLabHD/zitadel/main/.stagefreight/scribe/dev-size.svg)](https://github.com/HomeLabHD/zitadel/pkgs/container/zitadel)
 <!-- sf:image:end -->
 
+<!-- sf:image-login:start -->
+<!-- sf:image-login:end -->
+
 ---
 
 **[🏡 Website](https://zitadel.com) &nbsp;|&nbsp; [💬 Chat](https://zitadel.com/chat) &nbsp;|&nbsp; [📋 Docs](https://zitadel.com/docs/) &nbsp;|&nbsp; [🧑‍💻 Blog](https://zitadel.com/blog) &nbsp;|&nbsp; [📞 Contact](https://zitadel.com/contact/)**
