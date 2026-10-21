@@ -65,6 +65,7 @@ No vendor lock-in. No compromise on control. Just a robust, API-first identity p
 <!-- sf:image:end -->
 
 <!-- sf:image-login:start -->
+[![GHCR](https://img.shields.io/badge/GHCR-homelabhd%2Fzitadel--login-181717?logo=github&logoColor=white)](https://github.com/HomeLabHD/zitadel/pkgs/container/zitadel-login) [![Docker](https://img.shields.io/badge/Docker-hlhd%2Fzitadel--login-2496ED?logo=docker&logoColor=white)](https://hub.docker.com/r/hlhd/zitadel-login) [![pulls](https://img.shields.io/docker/pulls/hlhd/zitadel-login?color=1d63ed&logo=docker&logoColor=white)](https://hub.docker.com/r/hlhd/zitadel-login) [![Harbor](https://img.shields.io/badge/Harbor-hlhd%2Fzitadel--login-60b932)](https://cr.pcfae.com/harbor/projects)
 <!-- sf:image-login:end -->
 
 ---
