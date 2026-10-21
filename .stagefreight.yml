@@ -18,6 +18,17 @@ builds:
       - linux/amd64
   preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/build-docker.yml
 scribe:
+  files:
+    readme.image-login:
+      between:
+        - <!-- sf:image-login:start -->
+        - <!-- sf:image-login:end -->
+      file: README.md
+      items:
+        - login-ghcr
+        - login-docker
+        - login-pulls
+        - login-harbor
   preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/scribe-docker.yml
 lint:
   exclude:
@@ -168,6 +179,19 @@ publish:
         - tag
       git_tags:
         - stable
+  login-metadata:
+    kind: metadata
+    path: '{org.docker}/zitadel-login'
+    readme: README.md
+    registry:
+      - dockerhub
+      - harbor
+    when:
+      branches:
+        - main
+      events:
+        - push
+        - tag
   login-reg-dev:
     build: login
     kind: registry
@@ -306,6 +330,33 @@ repos:
       - primary
     worktree: .
 stencils:
+  login-docker:
+    color: '#2496ED'
+    label: Docker
+    link: https://hub.docker.com/r/{org.docker}/zitadel-login
+    logo: docker
+    logo_color: white
+    message: '{org.docker}/zitadel-login'
+    render: shield
+  login-ghcr:
+    color: '#181717'
+    label: GHCR
+    link: https://github.com/{path.github}/pkgs/container/zitadel-login
+    logo: github
+    logo_color: white
+    message: '{org.ghcr}/zitadel-login'
+    render: shield
+  login-harbor:
+    color: '#60b932'
+    label: Harbor
+    link: https://cr.pcfae.com/harbor/projects
+    message: '{org.docker}/zitadel-login'
+    render: shield
+  login-pulls:
+    label: pulls
+    link: https://hub.docker.com/r/{org.docker}/zitadel-login
+    render: shield
+    shield: docker/pulls/{org.docker}/zitadel-login?color=1d63ed&logo=docker&logoColor=white
   presets:
     - https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/stencils-base.yml
     - https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/stencils-status.yml
