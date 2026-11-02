@@ -72,7 +72,7 @@ build_cache:
 ci:
   forge:
     - gitlab
-  image: docker.cr.pcfae.com/prplanit/stagefreight:latest-dev
+  image: docker.cr.optcp.com/prplanit/stagefreight:latest-dev
 forges:
   preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/forges.yml
 git:
@@ -349,7 +349,7 @@ stencils:
   login-harbor:
     color: '#60b932'
     label: Harbor
-    link: https://cr.pcfae.com/harbor/projects
+    link: https://cr.optcp.com/harbor/projects
     message: '{org.docker}/zitadel-login'
     render: shield
   login-pulls:
