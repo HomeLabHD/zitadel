@@ -8,7 +8,7 @@
 ############################
 # Build stage (Go + Node for codegen/console)
 ############################
-FROM golang:1.25-bookworm AS build
+FROM golang:1.26-bookworm AS build
 ARG VERSION=dev
 ARG COMMIT=unknown
 ARG BUILD_DATE            # RFC3339 (cmd/build/info.go parses time.RFC3339, else warns + uses now)
