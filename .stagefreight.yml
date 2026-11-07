@@ -158,6 +158,7 @@ publish:
     path: '{org.ghcr}/zitadel-login'
     registry:
       - ghcr
+    signing_profile: release
     tags:
       - v{version}
     when:
@@ -171,6 +172,7 @@ publish:
     path: '{org.ghcr}/zitadel-login'
     registry:
       - ghcr
+    signing_profile: release
     tags:
       - v{version}
       - latest
@@ -216,6 +218,7 @@ publish:
     registry:
       - dockerhub
       - harbor
+    signing_profile: release
     tags:
       - v{version}
     when:
@@ -230,6 +233,7 @@ publish:
     registry:
       - dockerhub
       - harbor
+    signing_profile: release
     tags:
       - v{version}
       - latest
@@ -245,6 +249,7 @@ publish:
       - dockerhub
       - ghcr
       - harbor
+    signing_profile: release
     tags:
       - v{version}
     when:
@@ -301,6 +306,7 @@ publish:
       - dockerhub
       - ghcr
       - harbor
+    signing_profile: release
     tags:
       - v{version}
       - latest
@@ -330,6 +336,12 @@ repos:
     worktree: .
 schedules:
   preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/schedules-upstream.yml
+secrets:
+  providers:
+    openbao:
+      kind: vault
+signing:
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/signing.yml
 stencils:
   login-docker:
     color: '#2496ED'
