@@ -269,6 +269,7 @@ publish:
         - tag
       git_tags:
         - prerelease
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/publish-docker.yml
   project-metadata:
     kind: metadata
     readme: README.md
@@ -384,8 +385,7 @@ upstream:
   sources:
     zitadel:
       git: https://github.com/zitadel/zitadel
-      select:
-        tags: ^v(?P<version>\d+\.\d+\.\d+)$
+      tags: ^v(?P<version>\d+\.\d+\.\d+)$
   sync:
     from: zitadel
   version:
