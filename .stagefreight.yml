@@ -82,7 +82,7 @@ metadata:
   description:
     - Identity and access management — an OIDC/OAuth2/SAML provider and user-management platform.
     - 'Fork of Zitadel carrying the login-v2 project-private-labeling fix (upstream #10692); the backend and login-v2 images are built from source and published from this repo.'
-  license: Apache-2.0
+  license: AGPL-3.0-only
   org: HomeLabHD
   title: Zitadel
   topics:
@@ -102,40 +102,6 @@ orgs:
       handle: hlhd
     maintainer: HomeLabHD <homelabhelp@gmail.com>
 publish:
-  dev:
-    build: image
-    kind: registry
-    registry:
-      - dockerhub
-      - ghcr
-      - harbor
-    retention:
-      keep_last: 2
-    tags:
-      - dev-{sha:8}
-      - latest-dev
-    when:
-      branches:
-        - main
-      events:
-        - push
-  dev-release:
-    aliases:
-      - latest-dev
-    kind: release
-    registry_links: true
-    repos:
-      - primary
-    retention:
-      keep_last: 2
-    security_summary: true
-    tag: dev-{sha:8}
-    type: prerelease
-    when:
-      branches:
-        - main
-      events:
-        - push
   login-ghcr-dev:
     build: login
     kind: registry
@@ -243,79 +209,10 @@ publish:
       git_tags:
         - stable
   prerelease:
-    build: image
-    kind: registry
-    registry:
-      - dockerhub
-      - ghcr
-      - harbor
     signing_profile: release
-    tags:
-      - v{version}
-    when:
-      events:
-        - tag
-      git_tags:
-        - prerelease
-  prerelease-release:
-    kind: release
-    registry_links: true
-    repos:
-      - primary
-    security_summary: true
-    type: prerelease
-    when:
-      events:
-        - tag
-      git_tags:
-        - prerelease
   preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/publish-docker.yml
-  project-metadata:
-    kind: metadata
-    readme: README.md
-    registry:
-      - dockerhub
-      - harbor
-    repos:
-      - primary
-      - github-mirror
-    when:
-      branches:
-        - main
-      events:
-        - push
-        - tag
-  release:
-    aliases:
-      - v{version}
-      - latest
-    kind: release
-    registry_links: true
-    repos:
-      - primary
-    security_summary: true
-    type: latest
-    when:
-      events:
-        - tag
-      git_tags:
-        - stable
   stable:
-    build: image
-    kind: registry
-    registry:
-      - dockerhub
-      - ghcr
-      - harbor
     signing_profile: release
-    tags:
-      - v{version}
-      - latest
-    when:
-      events:
-        - tag
-      git_tags:
-        - stable
 registries:
   preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/registries.yml
 repos:
@@ -386,8 +283,5 @@ upstream:
     zitadel:
       git: https://github.com/zitadel/zitadel
       tags: ^v(?P<version>\d+\.\d+\.\d+)$
-  sync:
-    from: zitadel
   version:
-    since: v4.19.4
     track: zitadel
