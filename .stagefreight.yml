@@ -208,11 +208,7 @@ publish:
         - tag
       git_tags:
         - stable
-  prerelease:
-    signing_profile: release
   preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/publish-docker.yml
-  stable:
-    signing_profile: release
 registries:
   preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/registries.yml
 repos:
