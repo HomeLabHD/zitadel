@@ -46,6 +46,8 @@ default:
 
 audition:
   stage: audition
+  tags:
+    - sf-build-internal
   variables:
     GIT_DEPTH: 0
   before_script:
@@ -63,6 +65,8 @@ perform:
   id_tokens:
     STAGEFREIGHT_OIDC:
       aud: stagefreight
+  tags:
+    - sf-build-internal
   variables:
     GIT_DEPTH: 0
   before_script:
@@ -78,6 +82,8 @@ perform:
 
 review:
   stage: review
+  tags:
+    - sf-build-internal
   needs: [perform]
   before_script:
     - *sf-context
@@ -96,6 +102,8 @@ publish:
   id_tokens:
     STAGEFREIGHT_OIDC:
       aud: stagefreight
+  tags:
+    - sf-build-internal
   needs:
     - perform
     - review
@@ -113,6 +121,8 @@ publish:
 
 narrate:
   stage: narrate
+  tags:
+    - sf-build-internal
   needs:
     - perform
     - review

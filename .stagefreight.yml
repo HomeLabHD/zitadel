@@ -73,6 +73,10 @@ ci:
   forge:
     - gitlab
   image: docker.cr.optcp.com/prplanit/stagefreight:latest-dev
+  routing:
+    default:
+      labels:
+        - sf-build-internal
 forges:
   preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/forges.yml
 git:
